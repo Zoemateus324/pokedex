@@ -22,3 +22,12 @@ ol.pokemon li {
     color: #fff;
     height: 110px;
 }
+
+.logo-pokemon {
+    margin: 3px;
+}
+
+ol.pokemon img {
+    height: 79px;
+    width: 125px;
+}
