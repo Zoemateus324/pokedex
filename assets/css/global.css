@@ -6,7 +6,7 @@
     padding: 1rem;
 }
 
-ol.pokemon {
+.pokemon {
     display: grid;
     grid-template-columns: 1fr 1fr;
     list-style: none;
@@ -14,7 +14,12 @@ ol.pokemon {
     padding: 0;
 }
 
-ol.pokemon li {
+.pokemon .number {
+    color: black;
+    text-align: right;
+}
+
+.pokemon {
     margin: .5rem;
     padding: 1rem;
     background-color: #2d0097;
@@ -27,7 +32,8 @@ ol.pokemon li {
     margin: 3px;
 }
 
-ol.pokemon img {
-    height: 79px;
-    width: 125px;
+.pokemon .detail img {
+    max-width: 100%;
+    opacity: 0.3;
+    height: 100px;
 }
