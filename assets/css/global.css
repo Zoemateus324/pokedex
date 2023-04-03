@@ -56,6 +56,6 @@
 
 .pokemons .detail img {
     max-width: 100%;
-    opacity: 0.3;
-    height: 100px;
+    
+    height: 70px;
 }
