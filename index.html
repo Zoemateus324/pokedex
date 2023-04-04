@@ -1,74 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!--Google Fonts-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,300&display=swap"
-            rel="stylesheet">
-        <!--Normalize-->
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-            integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"
-            />
-        <!--Global Css-->
-        <link rel="stylesheet" href="./assets/css/global.css">
-        <link rel="stylesheet" href="./assets/css/pokedex.css">
-        <title>Pokedex</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,300&display=swap"
+        rel="stylesheet">
+    <!--Normalize-->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Global CSS-->
+    <link rel="stylesheet" href="./assets/css/global.css">
+    <link rel="stylesheet" href="./assets/css/pokedex.css">
+    <title>Pokedex</title>
+</head>
 
-    <body>
+<body>
 
-        <section class="content">
+    <section class="content">
 
-            <img id="logo-pokemon"
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1200px-International_Pok%C3%A9mon_logo.svg.png"
-                alt="Logo-pokemon" height="55px" width="185px">
-            <ol class="pokemons">
-                <li class="pokemon">
-                    <span class="number">#001</span>
-                    <span class="name">Pikachu</span>
-                    <div class="datail">
-                        <ol class="types">
-                            <li class="type">grass</li>
-                            <li class="type">Eletric</li>
-                        </ol>
-                        <img
-                            src="https://www.pngall.com/wp-content/uploads/5/Pokemon-Pikachu-PNG-Download-Image.png"
-                            alt="pikachu" width="150px" height="80px">
+        <img id="logo-pokemon"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1200px-International_Pok%C3%A9mon_logo.svg.png"
+            alt="Logo-pokemon" height="55px" width="185px">
+        <ol class="pokemons">
+            <li class="pokemon">
+                <span class="number">#001</span>
+                <span class="name">Pikachu</span>
+                <div class="detail">
+                    <ol class="types">
+                        <li class="type">grass</li>
+                        <li class="type">Electric</li>
+                    </ol>
+                    <img src="https://www.pngall.com/wp-content/uploads/5/Pokemon-Pikachu-PNG-Download-Image.png"
+                        alt="pikachu" width="150px" height="80px">
+                </div>
+            </li>
+        </ol>
 
-                    </div>
-                </li>
+    </section>
 
+    <!--Main Javascript-->
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/poke-api.js"></script>
+    <script src="./assets/js/pokemon-model.js"></script>
 
-            </ol>
-        </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <!--Main Javascript-->
-        <script src="./assets/js/main.js"></script>
-        <script src="./assets/js/poke-api.js"></script>
-        <script src="./assets/js/pokemon-model.js"></script>
-    </body>
+</body>
 
 </html>
