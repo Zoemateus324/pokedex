@@ -1,20 +1,30 @@
 const offset = 0
 const limit = 10
 const url = `https://pokeapi.co/v2/pokemon?offset=${offset}&limit=${limit}`
+
+function convertPokemonTypesToLi(pokemonTypes){
+     return pokemon.Types.map((typeSlot)=>'<li class="type">${typeSlot.type.name}</li>')
+}
+
+
+
 function convertPokemonToLi(pokemon) {
     return `
     <li class="pokemon">
-                <span class="number">#001</span>
+                <span class="number">#${pokemon.order}</span>
                 <span class="name">${pokemon.name}</span>
+                
                 <div class="detail">
                     <ol class="types">
-                        <li class="type">grass</li>
+                    <li class="type">
+                        ${convertPokemonTypesToLi(pokemon.types).join('')}
+                        </li>
                         <li class="type">Electric</li>
                     </ol>
         <img src="https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/1.svg" alt="${pokemon.name}">
-      </div>
+    </div>
     </li> 
- `
+`
 }
 
 const pokemonList = document.getElementById('pokemonList')
