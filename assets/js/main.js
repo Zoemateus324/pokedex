@@ -2,8 +2,8 @@ const offset = 0
 const limit = 10
 const url = `https://pokeapi.co/v2/pokemon?offset=${offset}&limit=${limit}`
 
-function convertPokemonTypesToLi(pokemonTypes){
-     return pokemon.Types.map((typeSlot)=>'<li class="type">${typeSlot.type.name}</li>')
+function convertPokemonTypesToLi(pokemonTypes) {
+    return pokemonTypes.map((typeSlot) => `<li class="type">${typeSlot.type.name}</li>`)
 }
 
 
@@ -16,12 +16,11 @@ function convertPokemonToLi(pokemon) {
                 
                 <div class="detail">
                     <ol class="types">
-                    <li class="type">
-                        ${convertPokemonTypesToLi(pokemon.types).join('')}
-                        </li>
-                        <li class="type">Electric</li>
+                    
+                        ${convertPokemonTypesToLi(pokemon.types).join(' ')}
+                      
                     </ol>
-        <img src="https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/1.svg" alt="${pokemon.name}">
+        <img src="${pokemon.sprites.other.dream_world.front_default}" alt="${pokemon.name}">
     </div>
     </li> 
 `
@@ -30,11 +29,10 @@ function convertPokemonToLi(pokemon) {
 const pokemonList = document.getElementById('pokemonList')
 
 pokeApi.getPokemons().then((pokemons) => {
-        for (let i = 0; i < pokemons.length; i++) {
-            const pokemon = pokemons[i];
-            pokemonList.innerHTML += convertPokemonToLi(pokemon)
+    for (let i = 0; i < pokemons.length; i++) {
+        const pokemon = pokemons[i];
+        pokemonList.innerHTML += convertPokemonToLi(pokemon)
 
-        }
+    }
 
-    })
-    .catch((error) => console.error(error))
+})
