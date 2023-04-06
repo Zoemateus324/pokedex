@@ -1,6 +1,13 @@
 const offset = 0
 const limit = 10
 const url = `https://pokeapi.co/v2/pokemon?offset=${offset}&limit=${limit}`
+
+function convertPokemonTypesToLi(pokemonTypes) {
+    return pokemonTypes.map((typeSlot) => `<li class="type">${typeSlot.type.name}</li>`)
+}
+
+
+
 function convertPokemonToLi(pokemon) {
     return `
     <li class="pokemon">
@@ -9,7 +16,9 @@ function convertPokemonToLi(pokemon) {
                 
                 <div class="detail">
                     <ol class="types">
-                     ${pokemon.types.map((type) => '<li class"type>${type</li>')}
+                    
+                        ${convertPokemonTypesToLi(pokemon.types).join(' ')}
+                      
                     </ol>
         <img src="${pokemon.sprites.other.dream_world.front_default}" alt="${pokemon.name}">
     </div>
