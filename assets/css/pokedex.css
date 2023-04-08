@@ -141,9 +141,28 @@
     margin: .25rem 0;
     font-size: .625rem;
     color: #fff;
-    background-color: #6c79db;
+    background-color: #2aff6a;
     border: none;
     border-radius: 1rem;
+}
+
+.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+}
+
+.pagination button {
+    background-color: #6c79db;
+    border: none;
+    border-radius: 3rem;
+    font-size: 18px;
+    width: 275px;
+    height: 45px;
+    filter: brightness(1.1);
 }
 
 @media screen and (min-width: 380px) {
